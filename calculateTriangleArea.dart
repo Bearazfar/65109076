@@ -1,4 +1,5 @@
 import 'dart:math';
+
 //1
 calculateTriangleArea(double sideA, double sideB, double sideC) {
   if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
@@ -16,29 +17,10 @@ calculateTriangleArea(double sideA, double sideB, double sideC) {
   return(area);
 }
 
-
-//2
-
-checkOddEven(int number){
-  if (number % 2 == 0) {
-    print("$number is even.");
-  } else {
-    print("$number is odd.");
-  }
-
-  
-  for (int i = 1; i <= 5; i++) {
-    print("Number: $i");
-  }
-}
-
-
-//3
-
-
 void main() {
-  
-  calculateTriangleArea(3,4,5);
-  checkOddEven(15);
+  double sideA = 3;
+  double sideB = 4;
+  double sideC = 5;
+  calculateTriangleArea(sideA,sideB,sideC);
   
 }
