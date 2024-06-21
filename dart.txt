@@ -1,0 +1,44 @@
+import 'dart:math';
+//1
+calculateTriangleArea(double sideA, double sideB, double sideC) {
+  if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
+    print("Error: All side lengths must be positive numbers.");
+  }
+
+  if (sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA) {
+    print("Error: The given sides do not form a triangle.");
+  }
+
+  double semiPerimeter = (sideA + sideB + sideC) / 2;
+  double area = sqrt(semiPerimeter *(semiPerimeter - sideA) *(semiPerimeter - sideB) * (semiPerimeter - sideC));
+
+  print(area);
+  return(area);
+}
+
+
+//2
+
+checkOddEven(int number){
+  if (number % 2 == 0) {
+    print("$number is even.");
+  } else {
+    print("$number is odd.");
+  }
+
+  
+  for (int i = 1; i <= 5; i++) {
+    print("Number: $i");
+  }
+}
+
+
+//3
+
+
+void main() {
+  
+  calculateTriangleArea(3,4,5);
+  checkOddEven(15);
+  
+}
